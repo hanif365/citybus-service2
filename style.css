@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background:url("images/bus.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    padding: 20px 0;
+}
+.container{
+    width: 1200px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 6px;
+}
+nav ul li a{
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    transition: all 500ms;
+}
+nav ul li a:hover, a.active{
+    background-color: #52AF3A;
+    border-radius: 5px;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 70px;
+    align-items: center;
+}
+.booking-content{
+    color: #fff;
+    width: 100%;
+    float: left;
+    margin-left: 50px;
+}
+.booking-content h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+.booking-form{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    width: 80%;
+    margin: 50px 0px 0px 80px;
+}
+.booking-form h3{
+    margin: 10px 0px;
+}
+.booking-form  .input-group{
+    margin: 10px 0;
+}
+.booking-form  .calculations{
+    margin: 10px 0;
+}
+.booking-form  .calculations p{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.booking-form input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #F3F5FF;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+.booking-form .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.f-class{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inp-width{
+    min-width: 100px;
+}
+.plus-minus-btn{
+    /* color: #3352F2; */
+    font-size: 30px;
+    padding: 2px;
+    margin: 10px 10px 0px 10px;
+    word-spacing: 20px;
+}
+.btn-style{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color:  rgba(81, 175, 58, 0.747);
+    outline: none;
+    transition: all 500ms;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn-style:hover{
+    background-color:  rgba(81, 175, 58, 1);
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/********************* Some New Style Added *************************/
+.text-highlight{
+    color: #f39c12;
+}
+.booking-content h2{
+    margin: 15px 0 10px 0;
+}
+.text-colorful{
+    color: #52AF3A;
+}
+.text-light{
+    color: cornsilk;
+}
+/* Button count increse and decrese style */
+.update-btn-plus,
+.update-btn-minus{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.update-btn-plus:hover{
+    background: #52AF3A;
+    color: #fff;
+}
+.update-btn-minus:hover{
+    background: red;
+    color: #fff;
+}
+/* Book Now Button */
+.book-now-btn{
+    padding: 10px;
+}
+.order-message{
+    width: 500px;
+    height: 360px;
+    overflow: hidden;
+    
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+#confirmation-box{
+    background: #08C9F2;
+}
+#error-message img{
+    height: 150px;
+    width: 250px;
+    /* border-radius: 50px 10px 50px 10px; */
+}
+#confirmation-box h1,
+#confirmation-box p,
+#error-message h1{
+    margin: 0 0 20px 0;
+}
+
+
+#confirmation-message{
+    background: #607D9B;
+}  
+#confirmation-message h1{
+    margin: 7px 0;
+}
+#error-message{
+    background: #E1E2E4;
+}
+
+.confirm-btn{
+    background: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    transition: all 500ms;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.confirm-btn:hover{
+    background: #2ecc71;
+    color: #fff;
+}
+.close-btn{
+    background: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    transition: all 500ms;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.close-btn:hover{
+    background: red;
+    color: #fff;
+}
+#journey-from,
+#journey-to{
+    padding: 10px 20px;
+}
