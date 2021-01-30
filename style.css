@@ -103,7 +103,6 @@ nav ul li a:hover, a.active{
     min-width: 100px;
 }
 .plus-minus-btn{
-    /* color: #3352F2; */
     font-size: 30px;
     padding: 2px;
     margin: 10px 10px 0px 10px;
@@ -146,6 +145,7 @@ nav ul li a:hover, a.active{
 .text-light{
     color: cornsilk;
 }
+
 /* Button count increse and decrese style */
 .update-btn-plus,
 .update-btn-minus{
@@ -162,6 +162,7 @@ nav ul li a:hover, a.active{
     background: red;
     color: #fff;
 }
+
 /* Book Now Button */
 .book-now-btn{
     padding: 10px;
@@ -170,7 +171,6 @@ nav ul li a:hover, a.active{
     width: 500px;
     height: 360px;
     overflow: hidden;
-    
     box-shadow: 0 0 20px black;
     border-radius: 8px;
     position: absolute;
@@ -188,15 +188,12 @@ nav ul li a:hover, a.active{
 #error-message img{
     height: 150px;
     width: 250px;
-    /* border-radius: 50px 10px 50px 10px; */
 }
 #confirmation-box h1,
 #confirmation-box p,
 #error-message h1{
     margin: 0 0 20px 0;
 }
-
-
 #confirmation-message{
     background: #607D9B;
 }  
@@ -206,7 +203,6 @@ nav ul li a:hover, a.active{
 #error-message{
     background: #E1E2E4;
 }
-
 .confirm-btn{
     background: #fff;
     padding: 10px 20px;
@@ -243,6 +239,8 @@ nav ul li a:hover, a.active{
 #journey-to{
     padding: 10px 20px;
 }
+
+/*********** Media Query(A little bit) ***********/
 
 @media (max-width:768px){
     nav ul li a{

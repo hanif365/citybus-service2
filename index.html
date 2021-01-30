@@ -162,7 +162,7 @@
             <h4>Have a Nice <span class="text-highlight">Journey</span></h4>
             <button class="close-btn" onclick="confirm()">Close</button>
         </div>
-        <!--============================ Error Message ============================-->
+        <!--= Error Message(if not selected any ticket and click booked now button)==-->
         <div id="error-message" class="order-message">
             <img src="images/error.png" alt="bus">
             <h1>Please Select Number of Ticket</h1>
@@ -176,9 +176,9 @@
 
         // Here, two types of ticket quality, (1) firstclass and (2) economic class
         function handleTicketChange(ticketQuality, isIncrese) {
-            var ticketInput = document.getElementById(ticketQuality + '-ticketcount');
-            var ticketCount = parseInt(ticketInput.value);
-            var ticketNewCount = ticketCount;
+            const ticketInput = document.getElementById(ticketQuality + '-ticketcount');
+            let ticketCount = parseInt(ticketInput.value);
+            let ticketNewCount = ticketCount;
             if (isIncrese == true) {                // if isIncrese true then ticketCount increse by 1 
                 ticketNewCount = ticketCount + 1;
             }
@@ -190,25 +190,25 @@
         }
 
         function calculateFare() {
-            var firstClassTicketCount = getTicketCount('firstclass');   // Another function call to find quantity of ticket
-            var economicTicketCount = getTicketCount('economy');
+            const firstClassTicketCount = getTicketCount('firstclass');   // Another function call to find quantity of ticket
+            const economicTicketCount = getTicketCount('economy');
 
-            var firstClassUnitTicketPrice = 150;    // here, we assume, unit ticket price of fastclass and  
-            var economicUnitTicketPrice = 100;      // economic class   respectively $150 and $100.
+            const firstClassUnitTicketPrice = 150;    // here, we assume, unit ticket price of fastclass and  
+            const economicUnitTicketPrice = 100;      // economic class   respectively $150 and $100.
 
-            var subTotal = (firstClassTicketCount * firstClassUnitTicketPrice) + (economicTicketCount * economicUnitTicketPrice);
+            const subTotal = (firstClassTicketCount * firstClassUnitTicketPrice) + (economicTicketCount * economicUnitTicketPrice);
             document.getElementById('sub-total').innerText = '$' + subTotal;   // calculate subtotal
 
-            var vat = Math.round(subTotal * 0.1);
+            const vat = Math.round(subTotal * 0.1);
             document.getElementById('vat').innerText = '$' + vat;   // calculate VAT(Value Added Tax)
 
-            var total = subTotal + vat;
+            const total = subTotal + vat;
             document.getElementById('total-amount').innerText = '$' + total;    // calculate total ticket price
         }
-        
+
         function getTicketCount(ticketClass) {      // here, getTicketCount function find to count of both class of ticket.
-            var ticketInput = document.getElementById(ticketClass + '-ticketcount');
-            var ticketCount = parseInt(ticketInput.value);
+            const ticketInput = document.getElementById(ticketClass + '-ticketcount');
+            const ticketCount = parseInt(ticketInput.value);
             return ticketCount;
         }
 
@@ -216,9 +216,9 @@
 
         // ========== If a user clicked Booked-now button without selecting any ticket then an error message shows. ==========
 
-        var count = 0;
+        let count = 0;
         function orderTicket() {
-            var totalAmount = document.getElementById('total-amount').innerText;
+            const totalAmount = document.getElementById('total-amount').innerText;
             if (totalAmount == '$0') {
                 document.getElementById('error-message').style.display = "block";
                 count = 1;
@@ -229,21 +229,21 @@
                 document.getElementById('confirmation-box').style.display = "block";
                 count = 1;
 
-                var firstClassTicketCount = getTicketCount('firstclass');   // Another function call to find quantity of ticket
-                var economicTicketCount = getTicketCount('economy');
-                var totalTicketCount = firstClassTicketCount + economicTicketCount;
+                const firstClassTicketCount = getTicketCount('firstclass');   // Another function call to find quantity of ticket
+                const economicTicketCount = getTicketCount('economy');
+                const totalTicketCount = firstClassTicketCount + economicTicketCount;
 
                 document.getElementById('ticket-count-display').innerText = totalTicketCount;
                 document.getElementById('firstclass-ticket-display').innerText = firstClassTicketCount;
                 document.getElementById('economy-ticket-display').innerText = economicTicketCount;
 
-                var subTotalOutput = document.getElementById('sub-total').innerText;
+                const subTotalOutput = document.getElementById('sub-total').innerText;
                 document.getElementById('subtotal-display').innerText = subTotalOutput;     // Display subtotal price
 
-                var vatOutput = document.getElementById('vat').innerText;
+                const vatOutput = document.getElementById('vat').innerText;
                 document.getElementById('vat-display').innerText = vatOutput;       // Display VAT
 
-                var totalAmountOutput = document.getElementById('total-amount').innerText;
+                const totalAmountOutput = document.getElementById('total-amount').innerText;
                 document.getElementById('total-display').innerText = totalAmountOutput;     // Display total amount
             }
             else {
@@ -258,7 +258,7 @@
         }
 
         // Confirmation message box open and confirmation box hidden
-        var condition = 0;
+        let condition = 0;
         function confirm() {
             if (condition == 0) {
                 document.getElementById('confirmation-message').style.display = "block";
