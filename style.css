@@ -243,3 +243,19 @@ nav ul li a:hover, a.active{
 #journey-to{
     padding: 10px 20px;
 }
+
+@media (max-width:768px){
+    nav ul li a{
+        padding: 0px;
+        margin-left: 10px;
+    }
+    .main-content{
+        gap: 20px;
+    }
+    .booking-content{
+        margin-left: 5px;
+    }
+    .booking-content h1{
+        font-size: 48px;
+    }
+}
