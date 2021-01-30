@@ -29,7 +29,7 @@
         </nav>
     </header>
 
-    <!--Booking Section-->
+    <!--=========================> Booking Section<==========================-->
     <main class="main-content container">
 
         <div class="booking-content">
@@ -44,9 +44,6 @@
 
             <div class="inputs">
                 <div class="input-group">
-                    <!-- <label" for="">Journey From</label> -->
-                    <!-- <input class="inp-style" type="text" name="" placeholder="Dhaka"> -->
-
                     <label for="journey-from">Journey From :</label>
                     <select name="journey-from" id="journey-from">
                         <option value="dhaka">Dhaka</option>
@@ -56,13 +53,8 @@
                         <option value="sirajgong">Sirajgong</option>
                         <option value="bogra">Bogra</option>
                     </select>
-
-
                 </div>
                 <div class="input-group">
-                    <!-- <label" for="">Journey To</label>
-                        <input class="inp-style" type="text" name="" placeholder="Pabna"> -->
-
                     <label for="journey-to">Journey To :</label>
                     <select name="journey-to" id="journey-to">
                         <option value="pabna">Pabna</option>
@@ -93,7 +85,6 @@
                             value="0" type="number" disabled>
                     </div>
                     <div class="plus-minus-btn">
-                        <!-- <p>+ - + -</p> -->
                         <button class="update-btn-plus" onclick="handleTicketChange('firstclass',true)" type="button"><i
                                 class="fas fa-plus"></i></button>
                         <button class="update-btn-minus" onclick="handleTicketChange('firstclass',false)"
@@ -107,7 +98,6 @@
                             type="number" disabled>
                     </div>
                     <div class="plus-minus-btn">
-                        <!-- <p> <span>+</span> <span>-</span> </p> -->
                         <button class="update-btn-plus" onclick="handleTicketChange('economy',true)" type="button"><i
                                 class="fas fa-plus"></i></button>
                         <button class="update-btn-minus" onclick="handleTicketChange('economy',false)" type="button"><i
@@ -160,7 +150,7 @@
             <p>VAT (10%) : <span id="vat-display" class="text-light"></span></p>
             <p>Grand Total Price (with VAT): <span id="total-display" class="text-light"></span></p>
 
-            <h2 class="text-colorful">Do you want to purchase tickets?</h2>
+            <h2 class="text-colorful">Do you want to confirm your tickets?</h2>
             <p>DBBL(Payment Now) <span class="text-light">017800000000</span></p>
             <button class="confirm-btn" onclick="confirm()">Confirm Order</button>
             <button class="close-btn" onclick="orderTicket()">Cancel Order</button>
@@ -173,7 +163,7 @@
 
         </div>
         <div id="error-message" class="order-message">
-            <img src="images/bus1.png" alt="bus">
+            <img src="images/error.png" alt="bus">
             <h1>Please Select Number of Ticket</h1>
             <button class="close-btn" onclick="closeNow()">Close</button>
         </div>
@@ -223,6 +213,7 @@
         }
 
         // ======================= Confirmation message part.=============================
+
         // ========== If a user clicked Booked-now button without selecting any ticket then an error message shows. ==========
 
         var count = 0;
