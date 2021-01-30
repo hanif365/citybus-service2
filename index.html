@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="images/fav-bus.jpeg" type="image/x-icon">
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="images/fav-bus.jpeg" type="image/x-icon">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,7 +38,6 @@
             <h2>We Provide Comfortable Journey With <span class="text-highlight">Reasonable Fare</span></h2>
             <button class="confirm-btn" type="button"><i class="fas fa-forward"></i> More Details</button>
         </div>
-
 
         <div class="booking-form">
             <h3>Explore By Bus</h3>
@@ -155,13 +155,14 @@
             <button class="confirm-btn" onclick="confirm()">Confirm Order</button>
             <button class="close-btn" onclick="orderTicket()">Cancel Order</button>
         </div>
+        <!--======================= Confirmation Message ========================= -->
         <div id="confirmation-message" class="order-message">
             <img src="images/thank-you1.png" alt="thank you message">
             <h2>Your Seats have been reserved!</h2>
             <h4>Have a Nice <span class="text-highlight">Journey</span></h4>
             <button class="close-btn" onclick="confirm()">Close</button>
-
         </div>
+        <!--============================ Error Message ============================-->
         <div id="error-message" class="order-message">
             <img src="images/error.png" alt="bus">
             <h1>Please Select Number of Ticket</h1>
@@ -169,11 +170,11 @@
         </div>
     </main>
 
-    <!-- ====================== Script start here ==========================-->
+    <!-- ========================= Script start here ===============================-->
 
     <script>
 
-        // Here, two types of ticket quality, (1) firstclass and (2) economic
+        // Here, two types of ticket quality, (1) firstclass and (2) economic class
         function handleTicketChange(ticketQuality, isIncrese) {
             var ticketInput = document.getElementById(ticketQuality + '-ticketcount');
             var ticketCount = parseInt(ticketInput.value);
@@ -195,7 +196,6 @@
             var firstClassUnitTicketPrice = 150;    // here, we assume, unit ticket price of fastclass and  
             var economicUnitTicketPrice = 100;      // economic class   respectively $150 and $100.
 
-
             var subTotal = (firstClassTicketCount * firstClassUnitTicketPrice) + (economicTicketCount * economicUnitTicketPrice);
             document.getElementById('sub-total').innerText = '$' + subTotal;   // calculate subtotal
 
@@ -204,8 +204,8 @@
 
             var total = subTotal + vat;
             document.getElementById('total-amount').innerText = '$' + total;    // calculate total ticket price
-
         }
+        
         function getTicketCount(ticketClass) {      // here, getTicketCount function find to count of both class of ticket.
             var ticketInput = document.getElementById(ticketClass + '-ticketcount');
             var ticketCount = parseInt(ticketInput.value);
